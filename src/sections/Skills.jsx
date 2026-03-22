@@ -17,10 +17,7 @@ function Skills() {
       <div className="section-inner">
         <Motion.div {...reveal} className="max-w-2xl">
           <span className="section-kicker">Skills</span>
-          <h2 className="section-title mt-6 text-slate-50">Organized by how you actually build.</h2>
-          <p className="section-copy mt-5">
-            These groups are placeholders too. Replace them with the technologies you really use instead of keeping someone else&apos;s stack.
-          </p>
+          <h2 className="section-title mt-6 text-slate-50">Here’s a quick overview of my technical skills:</h2>
         </Motion.div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -40,12 +37,15 @@ function Skills() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 {group.items.map((item) => (
-                  <span
+                  <Motion.span
                     key={item}
-                    className="rounded-full border border-cyan-300/15 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-slate-200"
+                    whileHover={{ scale: 1.05, backgroundColor: "rgba(103, 232, 249, 0.2)" }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    className="cursor-default rounded-full border border-cyan-300/15 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-slate-200"
                   >
                     {item}
-                  </span>
+                  </Motion.span>
                 ))}
               </div>
             </Motion.article>

@@ -64,13 +64,27 @@ function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#projects" className="button-primary">
+            <Motion.a 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              href="#projects" 
+              className="button-primary"
+            >
               View Projects
               <FaArrowRight />
-            </a>
-            <a href={portfolio.resumeHref} target="_blank" rel="noreferrer" className="button-secondary">
+            </Motion.a>
+            <Motion.a 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              href={portfolio.resumeHref} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="button-secondary"
+            >
               Open Resume
-            </a>
+            </Motion.a>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -78,16 +92,19 @@ function Home() {
               const Icon = socialIcons[link.label];
 
               return (
-                <a
+                <Motion.a
                   key={link.label}
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="glass-panel inline-flex items-center gap-3 rounded-full px-4 py-3 text-sm font-semibold text-slate-200 transition hover:-translate-y-1 hover:text-cyan-300"
+                  className="glass-panel inline-flex items-center gap-3 rounded-full px-4 py-3 text-sm font-semibold text-slate-200 hover:text-cyan-300"
                 >
                   {Icon ? <Icon className="text-base" /> : null}
                   {link.label}
-                </a>
+                </Motion.a>
               );
             })}
           </div>

@@ -32,14 +32,28 @@ function Contact() {
             <p className="section-copy mt-5 max-w-2xl">{portfolio.contact.text}</p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href={`mailto:${portfolio.email}`} className="button-primary">
+              <Motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                href={`mailto:${portfolio.email}`} 
+                className="button-primary"
+              >
                 <FaEnvelope />
                 Email Me
-              </a>
-              <a href={portfolio.resumeHref} target="_blank" rel="noreferrer" className="button-secondary">
+              </Motion.a>
+              <Motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                href={portfolio.resumeHref} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="button-secondary"
+              >
                 <FaFileArrowDown />
                 Resume
-              </a>
+              </Motion.a>
             </div>
           </div>
 
@@ -68,16 +82,19 @@ function Contact() {
                   const Icon = iconMap[link.label];
 
                   return (
-                    <a
+                    <Motion.a
                       key={link.label}
+                      whileHover={{ scale: 1.05, y: -4 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
                       href={link.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-cyan-300/30 hover:text-cyan-300"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 hover:border-cyan-300/30 hover:text-cyan-300"
                     >
                       {Icon ? <Icon /> : null}
                       {link.label}
-                    </a>
+                    </Motion.a>
                   );
                 })}
               </div>

@@ -20,15 +20,18 @@ function ActionButton({ href, label, children }) {
   }
 
   return (
-    <a
+    <Motion.a
+      whileHover={{ scale: 1.03, y: -4 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:text-cyan-300"
+      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-100 hover:border-cyan-300/30 hover:text-cyan-300"
     >
       {children}
       {label}
-    </a>
+    </Motion.a>
   );
 }
 

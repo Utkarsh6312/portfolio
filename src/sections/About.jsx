@@ -19,7 +19,7 @@ function About() {
         <Motion.div {...reveal} className="space-y-6">
           <span className="section-kicker">About</span>
           <h2 className="section-title max-w-md text-slate-50">
-            Rebuilt to feel like a personal brand, not a reused template.
+            I’m a full-stack developer who loves building beautiful, user-friendly web applications.
           </h2>
         </Motion.div>
 
