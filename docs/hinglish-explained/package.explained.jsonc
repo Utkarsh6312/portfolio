@@ -1,0 +1,64 @@
+// Study copy only: yeh explained version hai, asli package.json nahi hai.
+// Har original line ke neeche Hinglish explanation di gayi hai.
+{
+// Yeh JSON structure ke block ko open ya close kar rahi hai.
+  "name": "portfolio",
+// Yeh JSON key name ki value define kar rahi hai.
+  "private": true,
+// Yeh JSON key private ki value define kar rahi hai.
+  "version": "0.0.0",
+// Yeh JSON key version ki value define kar rahi hai.
+  "type": "module",
+// Yeh JSON key type ki value define kar rahi hai.
+  "scripts": {
+// Yeh JSON key scripts ki value define kar rahi hai.
+    "dev": "vite",
+// Yeh JSON key dev ki value define kar rahi hai.
+    "build": "vite build",
+// Yeh JSON key build ki value define kar rahi hai.
+    "lint": "eslint .",
+// Yeh JSON key lint ki value define kar rahi hai.
+    "preview": "vite preview"
+// Yeh JSON key preview ki value define kar rahi hai.
+  },
+// Yeh JSON structure ke block ko open ya close kar rahi hai.
+  "dependencies": {
+// Yeh JSON key dependencies ki value define kar rahi hai.
+    "@tailwindcss/vite": "^4.1.17",
+// Yeh JSON key @tailwindcss/vite ki value define kar rahi hai.
+    "framer-motion": "^12.23.25",
+// Yeh JSON key framer-motion ki value define kar rahi hai.
+    "react": "^19.2.0",
+// Yeh JSON key react ki value define kar rahi hai.
+    "react-dom": "^19.2.0",
+// Yeh JSON key react-dom ki value define kar rahi hai.
+    "react-icons": "^5.5.0",
+// Yeh JSON key react-icons ki value define kar rahi hai.
+    "tailwindcss": "^4.1.17"
+// Yeh JSON key tailwindcss ki value define kar rahi hai.
+  },
+// Yeh JSON structure ke block ko open ya close kar rahi hai.
+  "devDependencies": {
+// Yeh JSON key devDependencies ki value define kar rahi hai.
+    "@eslint/js": "^9.39.1",
+// Yeh JSON key @eslint/js ki value define kar rahi hai.
+    "@types/react": "^19.2.5",
+// Yeh JSON key @types/react ki value define kar rahi hai.
+    "@types/react-dom": "^19.2.3",
+// Yeh JSON key @types/react-dom ki value define kar rahi hai.
+    "@vitejs/plugin-react": "^5.1.1",
+// Yeh JSON key @vitejs/plugin-react ki value define kar rahi hai.
+    "eslint": "^9.39.1",
+// Yeh JSON key eslint ki value define kar rahi hai.
+    "eslint-plugin-react-hooks": "^7.0.1",
+// Yeh JSON key eslint-plugin-react-hooks ki value define kar rahi hai.
+    "eslint-plugin-react-refresh": "^0.4.24",
+// Yeh JSON key eslint-plugin-react-refresh ki value define kar rahi hai.
+    "globals": "^16.5.0",
+// Yeh JSON key globals ki value define kar rahi hai.
+    "vite": "^7.2.4"
+// Yeh JSON key vite ki value define kar rahi hai.
+  }
+// Yeh JSON structure ke block ko open ya close kar rahi hai.
+}
+// Yeh JSON structure ke block ko open ya close kar rahi hai.

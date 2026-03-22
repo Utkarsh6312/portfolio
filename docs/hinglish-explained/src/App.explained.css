@@ -1,0 +1,28 @@
+/* Study copy only: yeh explained version hai, app build is file se nahi hota. */
+/* Har original line ke neeche Hinglish explanation di gayi hai. */
+.app-shell {
+/* Yeh selector .app-shell ke styles start kar raha hai. */
+  min-height: 100vh;
+/* Yeh CSS property min-height ko 100vh par set kar rahi hai. */
+  position: relative;
+/* Yeh CSS property position ko relative par set kar rahi hai. */
+  background: #020617;
+/* Yeh CSS property background ko #020617 par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-grid {
+/* Yeh selector .section-grid ke styles start kar raha hai. */
+  background-image:
+/* Yeh CSS line styling setup ka hissa hai. */
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+/* Yeh CSS line styling setup ka hissa hai. */
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+/* Yeh CSS line styling setup ka hissa hai. */
+  background-size: 72px 72px;
+/* Yeh CSS property background-size ko 72px 72px par set kar rahi hai. */
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent);
+/* Yeh CSS property mask-image ko linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent) par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */

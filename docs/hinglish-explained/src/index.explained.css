@@ -1,0 +1,336 @@
+/* Study copy only: yeh explained version hai, app build is file se nahi hota. */
+/* Har original line ke neeche Hinglish explanation di gayi hai. */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap");
+/* Yeh external stylesheet ya utility system ko import kar rahi hai. */
+@import "tailwindcss";
+/* Yeh external stylesheet ya utility system ko import kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+:root {
+/* Yeh selector :root ke styles start kar raha hai. */
+  color-scheme: dark;
+/* Yeh CSS property color-scheme ko dark par set kar rahi hai. */
+  --bg: #020617;
+/* Yeh CSS property --bg ko #020617 par set kar rahi hai. */
+  --panel: rgba(15, 23, 42, 0.72);
+/* Yeh CSS property --panel ko rgba(15, 23, 42, 0.72) par set kar rahi hai. */
+  --panel-strong: rgba(15, 23, 42, 0.88);
+/* Yeh CSS property --panel-strong ko rgba(15, 23, 42, 0.88) par set kar rahi hai. */
+  --line: rgba(148, 163, 184, 0.18);
+/* Yeh CSS property --line ko rgba(148, 163, 184, 0.18) par set kar rahi hai. */
+  --text: #e2e8f0;
+/* Yeh CSS property --text ko #e2e8f0 par set kar rahi hai. */
+  --muted: #94a3b8;
+/* Yeh CSS property --muted ko #94a3b8 par set kar rahi hai. */
+  --accent: #67e8f9;
+/* Yeh CSS property --accent ko #67e8f9 par set kar rahi hai. */
+  --accent-2: #f472b6;
+/* Yeh CSS property --accent-2 ko #f472b6 par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+html {
+/* Yeh selector html ke styles start kar raha hai. */
+  scroll-behavior: smooth;
+/* Yeh CSS property scroll-behavior ko smooth par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+body {
+/* Yeh selector body ke styles start kar raha hai. */
+  margin: 0;
+/* Yeh CSS property margin ko 0 par set kar rahi hai. */
+  min-width: 320px;
+/* Yeh CSS property min-width ko 320px par set kar rahi hai. */
+  background: var(--bg);
+/* Yeh CSS property background ko var(--bg) par set kar rahi hai. */
+  color: var(--text);
+/* Yeh CSS property color ko var(--text) par set kar rahi hai. */
+  font-family: "Manrope", sans-serif;
+/* Yeh CSS property font-family ko "Manrope", sans-serif par set kar rahi hai. */
+  text-rendering: optimizeLegibility;
+/* Yeh CSS property text-rendering ko optimizeLegibility par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+a {
+/* Yeh selector a ke styles start kar raha hai. */
+  color: inherit;
+/* Yeh CSS property color ko inherit par set kar rahi hai. */
+  text-decoration: none;
+/* Yeh CSS property text-decoration ko none par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+button,
+/* Yeh CSS line styling setup ka hissa hai. */
+input,
+/* Yeh CSS line styling setup ka hissa hai. */
+textarea {
+/* Yeh selector textarea ke styles start kar raha hai. */
+  font: inherit;
+/* Yeh CSS property font ko inherit par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+* {
+/* Yeh selector * ke styles start kar raha hai. */
+  box-sizing: border-box;
+/* Yeh CSS property box-sizing ko border-box par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+#root {
+/* Yeh selector #root ke styles start kar raha hai. */
+  min-height: 100vh;
+/* Yeh CSS property min-height ko 100vh par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.display-font {
+/* Yeh selector .display-font ke styles start kar raha hai. */
+  font-family: "Syne", sans-serif;
+/* Yeh CSS property font-family ko "Syne", sans-serif par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.glass-panel {
+/* Yeh selector .glass-panel ke styles start kar raha hai. */
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.48));
+/* Yeh CSS property background ko linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.48)) par set kar rahi hai. */
+  backdrop-filter: blur(18px);
+/* Yeh CSS property backdrop-filter ko blur(18px) par set kar rahi hai. */
+  border: 1px solid var(--line);
+/* Yeh CSS property border ko 1px solid var(--line) par set kar rahi hai. */
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.34);
+/* Yeh CSS property box-shadow ko 0 24px 60px rgba(2, 6, 23, 0.34) par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-shell {
+/* Yeh selector .section-shell ke styles start kar raha hai. */
+  position: relative;
+/* Yeh CSS property position ko relative par set kar rahi hai. */
+  width: 100%;
+/* Yeh CSS property width ko 100% par set kar rahi hai. */
+  padding: 5.5rem 1.5rem;
+/* Yeh CSS property padding ko 5.5rem 1.5rem par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-inner {
+/* Yeh selector .section-inner ke styles start kar raha hai. */
+  width: 100%;
+/* Yeh CSS property width ko 100% par set kar rahi hai. */
+  max-width: 1180px;
+/* Yeh CSS property max-width ko 1180px par set kar rahi hai. */
+  margin: 0 auto;
+/* Yeh CSS property margin ko 0 auto par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-kicker {
+/* Yeh selector .section-kicker ke styles start kar raha hai. */
+  display: inline-flex;
+/* Yeh CSS property display ko inline-flex par set kar rahi hai. */
+  align-items: center;
+/* Yeh CSS property align-items ko center par set kar rahi hai. */
+  gap: 0.65rem;
+/* Yeh CSS property gap ko 0.65rem par set kar rahi hai. */
+  padding: 0.45rem 0.9rem;
+/* Yeh CSS property padding ko 0.45rem 0.9rem par set kar rahi hai. */
+  border-radius: 999px;
+/* Yeh CSS property border-radius ko 999px par set kar rahi hai. */
+  border: 1px solid rgba(103, 232, 249, 0.24);
+/* Yeh CSS property border ko 1px solid rgba(103, 232, 249, 0.24) par set kar rahi hai. */
+  background: rgba(8, 47, 73, 0.28);
+/* Yeh CSS property background ko rgba(8, 47, 73, 0.28) par set kar rahi hai. */
+  color: #a5f3fc;
+/* Yeh CSS property color ko #a5f3fc par set kar rahi hai. */
+  font-size: 0.78rem;
+/* Yeh CSS property font-size ko 0.78rem par set kar rahi hai. */
+  letter-spacing: 0.16em;
+/* Yeh CSS property letter-spacing ko 0.16em par set kar rahi hai. */
+  text-transform: uppercase;
+/* Yeh CSS property text-transform ko uppercase par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-kicker::before {
+/* Yeh selector .section-kicker::before ke styles start kar raha hai. */
+  content: "";
+/* Yeh CSS property content ko "" par set kar rahi hai. */
+  width: 0.5rem;
+/* Yeh CSS property width ko 0.5rem par set kar rahi hai. */
+  height: 0.5rem;
+/* Yeh CSS property height ko 0.5rem par set kar rahi hai. */
+  border-radius: 999px;
+/* Yeh CSS property border-radius ko 999px par set kar rahi hai. */
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+/* Yeh CSS property background ko linear-gradient(135deg, var(--accent), var(--accent-2)) par set kar rahi hai. */
+  box-shadow: 0 0 18px rgba(103, 232, 249, 0.7);
+/* Yeh CSS property box-shadow ko 0 0 18px rgba(103, 232, 249, 0.7) par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-title {
+/* Yeh selector .section-title ke styles start kar raha hai. */
+  font-family: "Syne", sans-serif;
+/* Yeh CSS property font-family ko "Syne", sans-serif par set kar rahi hai. */
+  font-size: clamp(2.25rem, 5vw, 4rem);
+/* Yeh CSS property font-size ko clamp(2.25rem, 5vw, 4rem) par set kar rahi hai. */
+  line-height: 0.95;
+/* Yeh CSS property line-height ko 0.95 par set kar rahi hai. */
+  letter-spacing: -0.04em;
+/* Yeh CSS property letter-spacing ko -0.04em par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.section-copy {
+/* Yeh selector .section-copy ke styles start kar raha hai. */
+  color: var(--muted);
+/* Yeh CSS property color ko var(--muted) par set kar rahi hai. */
+  font-size: 1rem;
+/* Yeh CSS property font-size ko 1rem par set kar rahi hai. */
+  line-height: 1.8;
+/* Yeh CSS property line-height ko 1.8 par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.spotlight {
+/* Yeh selector .spotlight ke styles start kar raha hai. */
+  position: absolute;
+/* Yeh CSS property position ko absolute par set kar rahi hai. */
+  border-radius: 999px;
+/* Yeh CSS property border-radius ko 999px par set kar rahi hai. */
+  filter: blur(90px);
+/* Yeh CSS property filter ko blur(90px) par set kar rahi hai. */
+  opacity: 0.5;
+/* Yeh CSS property opacity ko 0.5 par set kar rahi hai. */
+  pointer-events: none;
+/* Yeh CSS property pointer-events ko none par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.button-primary,
+/* Yeh CSS line styling setup ka hissa hai. */
+.button-secondary {
+/* Yeh selector .button-secondary ke styles start kar raha hai. */
+  display: inline-flex;
+/* Yeh CSS property display ko inline-flex par set kar rahi hai. */
+  align-items: center;
+/* Yeh CSS property align-items ko center par set kar rahi hai. */
+  justify-content: center;
+/* Yeh CSS property justify-content ko center par set kar rahi hai. */
+  gap: 0.6rem;
+/* Yeh CSS property gap ko 0.6rem par set kar rahi hai. */
+  border-radius: 999px;
+/* Yeh CSS property border-radius ko 999px par set kar rahi hai. */
+  padding: 0.9rem 1.35rem;
+/* Yeh CSS property padding ko 0.9rem 1.35rem par set kar rahi hai. */
+  font-weight: 700;
+/* Yeh CSS property font-weight ko 700 par set kar rahi hai. */
+  transition:
+/* Yeh CSS line styling setup ka hissa hai. */
+    transform 180ms ease,
+/* Yeh CSS line styling setup ka hissa hai. */
+    border-color 180ms ease,
+/* Yeh CSS line styling setup ka hissa hai. */
+    background-color 180ms ease,
+/* Yeh CSS line styling setup ka hissa hai. */
+    color 180ms ease;
+/* Yeh CSS line styling setup ka hissa hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.button-primary {
+/* Yeh selector .button-primary ke styles start kar raha hai. */
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+/* Yeh CSS property background ko linear-gradient(135deg, #22d3ee, #0ea5e9) par set kar rahi hai. */
+  color: #082f49;
+/* Yeh CSS property color ko #082f49 par set kar rahi hai. */
+  box-shadow: 0 16px 28px rgba(14, 165, 233, 0.18);
+/* Yeh CSS property box-shadow ko 0 16px 28px rgba(14, 165, 233, 0.18) par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.button-secondary {
+/* Yeh selector .button-secondary ke styles start kar raha hai. */
+  border: 1px solid rgba(148, 163, 184, 0.25);
+/* Yeh CSS property border ko 1px solid rgba(148, 163, 184, 0.25) par set kar rahi hai. */
+  background: rgba(15, 23, 42, 0.55);
+/* Yeh CSS property background ko rgba(15, 23, 42, 0.55) par set kar rahi hai. */
+  color: #e2e8f0;
+/* Yeh CSS property color ko #e2e8f0 par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+.button-primary:hover,
+/* Yeh CSS line styling setup ka hissa hai. */
+.button-secondary:hover {
+/* Yeh selector .button-secondary:hover ke styles start kar raha hai. */
+  transform: translateY(-2px);
+/* Yeh CSS property transform ko translateY(-2px) par set kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+@media (max-width: 768px) {
+/* Yeh responsive rule start kar rahi hai jo specific screen size par apply hoga. */
+  .section-shell {
+/* Yeh selector .section-shell ke styles start kar raha hai. */
+    padding: 4.5rem 1rem;
+/* Yeh CSS property padding ko 4.5rem 1rem par set kar rahi hai. */
+  }
+/* Yeh CSS block close kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+@media (prefers-reduced-motion: reduce) {
+/* Yeh responsive rule start kar rahi hai jo specific screen size par apply hoga. */
+  html {
+/* Yeh selector html ke styles start kar raha hai. */
+    scroll-behavior: auto;
+/* Yeh CSS property scroll-behavior ko auto par set kar rahi hai. */
+  }
+/* Yeh CSS block close kar rahi hai. */
+
+/* Yeh blank line CSS blocks ko readable bana rahi hai. */
+  *,
+/* Yeh CSS line styling setup ka hissa hai. */
+  *::before,
+/* Yeh CSS line styling setup ka hissa hai. */
+  *::after {
+/* Yeh selector *::after ke styles start kar raha hai. */
+    animation-duration: 0.01ms !important;
+/* Yeh CSS property animation-duration ko 0.01ms !important par set kar rahi hai. */
+    animation-iteration-count: 1 !important;
+/* Yeh CSS property animation-iteration-count ko 1 !important par set kar rahi hai. */
+    transition-duration: 0.01ms !important;
+/* Yeh CSS property transition-duration ko 0.01ms !important par set kar rahi hai. */
+    scroll-behavior: auto !important;
+/* Yeh CSS property scroll-behavior ko auto !important par set kar rahi hai. */
+  }
+/* Yeh CSS block close kar rahi hai. */
+}
+/* Yeh CSS block close kar rahi hai. */
