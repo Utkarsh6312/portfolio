@@ -14,17 +14,24 @@ function FramesBackground() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    preloadImages();
+    // 1. Preload and cache all image objects
+    const images = [];
+    for (let i = 1; i <= frameCount; i++) {
+       const img = new Image();
+       img.src = currentFrame(i);
+       images[i] = img;
+    }
 
     const canvas = canvasRef.current;
     if (!canvas) return;
     const context = canvas.getContext("2d");
 
-    const img = new Image();
-    img.src = currentFrame(1);
+    let currentRenderedFrame = 1;
+    let targetFrame = 1;
+    let animationFrameId;
 
     const updateCanvasImg = (image) => {
-      // Calculate aspect ratio to fit image into canvas while covering it
+      if (!image) return;
       const canvasRatio = canvas.width / canvas.height;
       const imgRatio = image.width / image.height;
 
@@ -45,42 +52,46 @@ function FramesBackground() {
       context.drawImage(image, offsetX, offsetY, drawWidth, drawHeight);
     };
 
-    img.onload = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      updateCanvasImg(img);
-    };
-
+    // Initial resize setup
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      updateCanvasImg(img);
+      const img = images[Math.round(currentRenderedFrame)];
+      if (img && img.complete) updateCanvasImg(img);
     };
-
+    handleResize(); // trigger once to set dimensions
     window.addEventListener("resize", handleResize);
 
+    // 2. Smooth Lerp Loop
+    const renderLoop = () => {
+      // Lerp: smoothly move currentRenderedFrame towards targetFrame
+      currentRenderedFrame += (targetFrame - currentRenderedFrame) * 0.08; 
+      
+      const frameIndex = Math.max(1, Math.min(frameCount, Math.round(currentRenderedFrame)));
+      const img = images[frameIndex];
+      
+      if (img && img.complete) {
+        updateCanvasImg(img);
+      }
+      
+      animationFrameId = requestAnimationFrame(renderLoop);
+    };
+    renderLoop();
+
+    // 3. Update target on scroll
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
       const scrollFraction = scrollTop / maxScroll;
       
-      const frameIndex = Math.min(
-        frameCount,
-        Math.max(1, Math.ceil(scrollFraction * frameCount))
-      );
-
-      requestAnimationFrame(() => {
-        const frameImg = new Image();
-        frameImg.src = currentFrame(frameIndex);
-        frameImg.onload = () => updateCanvasImg(frameImg);
-      });
+      targetFrame = Math.min(frameCount, Math.max(1, scrollFraction * frameCount));
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
